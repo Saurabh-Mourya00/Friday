@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to GenAI</title>
+    
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Welcome to friday!</h2>
+    </div>
+    <div class="content">
+        <p>Hi {{ user.first_name }} {{ user.last_name }},</p>
+        <p>Welcome to <strong>GenAI</strong>! We're excited to have you on board.</p>
+        <p>Your account has been successfully created. Here are your login details:</p>
+        <div style="text-align: left; padding: 15px; margin-top: 20px; border: 1px solid #ddd; border-radius: 5px;">
+            <p><strong>Username:</strong> {{ user.first_name }}</p>
+            <p><strong>Temporary Password:</strong> {{ password }}</p>
+            <p><em>Note:</em> This password will expire in 30 minutes. Please log in and change your password as soon as possible.</p>
+        </div>  
+    </div>
+    
+</div>
+
+</body>
+</html>

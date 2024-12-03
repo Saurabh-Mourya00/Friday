@@ -1,0 +1,50 @@
+{% extends 'defaults/base.htm'%}
+{% load static%}
+{% block content %}
+<br>
+
+<section class="hero-section text-white">
+    <br>
+    <br>
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-5">
+            <div class="col-lg-6 mx-auto text-white">
+               
+                <h5 class="card-title">Devotion</h5>
+                <p class="card-text">Keep going keep Lerning never stop friday will help  You from root .</p>
+                <p class="card-text">- Saurabh Mourya</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="latest-update text-center  m-3">
+    <div class="container">
+        <div class="latest-update-header">
+            <h2>Latest Update</h2>
+            <a class="view-all-btn" href="{%url 'library'%}">VIEW ALL</a>
+        </div>
+
+        <div class="row justify-content-center">
+            {% for book in books %}
+            <div class="col-md-6 col-lg-4">
+                <div class="update-item">
+                    <a href="{% url 'book_detail' book.id %}">
+                        <img alt="Cover image of {{ book.book_name }}" src="{{ book.cover.url }}" height="120"
+                            width="80" />
+                    </a>
+                    <h4 class="ml-4">{{ book.book_name }}</h4>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+</section>
+{% endblock %}

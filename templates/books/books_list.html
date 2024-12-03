@@ -1,0 +1,339 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        .latest-update {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .latest-update-header {
+            background-color: #b3003b;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .latest-update-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .view-all-btn {
+            background-color: #ff4081;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .update-item {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+        .update-item:last-child {
+            border-bottom: none;
+        }
+        .update-item img {
+            width: 80px;
+            height: 120px;
+            border-radius: 5px;
+        }
+        .update-details {
+            flex: 1;
+            padding-left: 10px;
+        }
+        .update-details h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .update-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 5px 0 0 0;
+        }
+        .update-details ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .update-details ul li span {
+            margin-left: 5px;
+        }
+        .badge-new {
+            background-color: #ff4081;
+            color: #ffffff;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+        .badge-ongoing {
+            background-color: #ffb300;
+            color: #ffffff;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+        .hero-section {
+            background-color: #333;
+            padding: 40px 0;
+        }
+        .hero-section h2, .hero-section h3, .hero-section p {
+            margin: 0 0 10px 0;
+        }
+        .hero-section .btn-warning {
+            background-color: #ffb300;
+            border: none;
+        }
+        .hero-section .badge-secondary {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Hero Section -->
+        <section class="hero-section text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="display-4">Book name </h2>
+                        <h3 class="mb-4">Cookbook</h3>
+                        <p>The books in clude in python ...</p>
+                        <a href="#" class="btn btn-warning btn-lg">Start Reading &rarr;</a>
+                        <span class="badge badge-secondary ml-2">Action</span>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="{% static 'images/anime-moon-landscape.jpg' %}" alt="Character Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Update Section -->
+        <div class="latest-update">
+            <div class="latest-update-header">
+                <h2>Latest Update</h2>
+                <a class="view-all-btn" href="#">VIEW ALL</a>
+            </div>
+            <div class="update-item">
+                <img alt="Cover image of Rust" height="120" src="" width="80"/>
+                <div class="update-details">
+                    <h3>Python </h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 9
+                            <span class="badge-new">NEW</span>
+                            <span>55 mins ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 8
+                            <span>6 days ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 7
+                            <span>2 weeks ago</span>
+                        </li>
+                    </ul>
+                    <span class="badge-ongoing">Ongoing</span>
+                </div>
+                <img alt="Cover image of The Extra's Academy Survival Guide" height="120" src="" width="80"/>
+                <div class="update-details">
+                    <h3>New wya</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 49
+                            <span class="badge-new">NEW</span>
+                            <span>1 hour ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 48
+                            <span>1 week ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 47
+                            <span>2 weeks ago</span>
+                        </li>
+                    </ul>
+                    <span class="badge-ongoing">Ongoing</span>
+                </div>
+            </div>
+            <div class="update-item">
+                <img alt="Cover image of Global freeze: I Built a Doomsday" height="120" src="" width="80"/>
+                <div class="update-details">
+                    <h3>Java</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-circle text-success"></i>
+                            Chapter 380
+                            <span class="badge-new">NEW</span>
+                            <span>50 mins ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-success"></i>
+                            Chapter 379
+                            <span class="badge-new">NEW</span>
+                            <span>50 mins ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-success"></i>
+                            Chapter 378
+                            <span>51 mins ago</span>
+                        </li>
+                    </ul>
+                    <span class="badge-ongoing">Ongoing</span>
+                </div>
+                <img alt="Cover image of Mercenary Enrollment" height="120" src="" width="80"/>
+                <div class="update-details">
+                    <h3>Mercenary Enrollment</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 210
+                            <span class="badge-new">NEW</span>
+                            <span>1 hour ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 209
+                            <span>1 week ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 208
+                            <span>2 weeks ago</span>
+                        </li>
+                    </ul>
+                    <span class="badge-ongoing">Ongoing</span>
+                </div>
+            </div>
+            <div class="update-item">
+                <img alt="Cover image of The Last Adventurer" height="120" src="" width="80"/>
+                <div class="update-details">
+                    <h3>The Last Adventurer</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 42
+                            <span class="badge-new">NEW</span>
+                            <span>1 hour ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 41
+                            <span>1 week ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 40
+                            <span>2 weeks ago</span>
+                        </li>
+                    </ul>
+                    <span class="badge-ongoing">Ongoing</span>
+                </div>
+                <img alt="Cover image of Swordmaster's Youngest Son" height="120" src="" width="80"/>
+                <div class="update-details">
+                    <h3>Swordmaster's Youngest Son</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 134
+                            <span class="badge-new">NEW</span>
+                            <span>1 hour ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 133
+                            <span>1 week ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 132
+                            <span>2 weeks ago</span>
+                        </li>
+                    </ul>
+                    <span class="badge-ongoing">Ongoing</span>
+                </div>
+            </div>
+            <div class="update-item">
+                <img alt="Cover image of Academy's Genius Swordmaster" height="120" src="" width="80"/>
+                <div class="update-details">
+                    <h3>Academy's Genius Swordmaster</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 71
+                            <span class="badge-new">NEW</span>
+                            <span>1 hour ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 70
+                            <span>7 days ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 69
+                            <span>2 weeks ago</span>
+                        </li>
+                    </ul>
+                    <span class="badge-ongoing">Ongoing</span>
+                </div>
+                <img alt="Cover image of " height="120" src="" width="80"/>
+                <div class="update-details">
+                    <h3>The Beginning </h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 190
+                            <span class="badge-new">NEW</span>
+                            <span>2 hours ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 189
+                            <span class="badge-new">NEW</span>
+                            <span>2 hours ago</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle text-danger"></i>
+                            Chapter 188
+                            <span>3 months ago</span>
+                        </li>
+                    </ul>
+                    <span class="badge-ongoing">Ongoing</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Image Section -->
+        <!-- <section>
+            <div class="container">
+                <div class="row d-flex justify-content-end">
+                    <div class="col-lg-6">
+                        <img src="" alt="First Image" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="" alt="Second Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </div>
+</body>
+</html>
